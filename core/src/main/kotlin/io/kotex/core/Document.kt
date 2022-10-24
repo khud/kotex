@@ -152,6 +152,10 @@ fun Document.italic(text: String) = text.italic()
 val Document.space: String
     get() = "\\,"
 
+fun Tag.newLine() {
+    children.add(TextElement("\\newline"))
+}
+
 fun Tag.appendix() {
     children.add(TextElement("\\appendix"))
 }
